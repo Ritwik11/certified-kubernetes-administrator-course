@@ -61,13 +61,6 @@ def write_script(filename: str, script: list):
 output_file_no = 1
 script = []
 output_file = None
-# Walk through any markdown files within the provided docs path.  The
-# original implementation only looked for files directly within
-# ``docs_path`` which meant that documentation organised into
-# sub-directories (as is the case in this repository) was ignored.  As a
-# result no scripts were generated.  Using ``recursive=True`` ensures all
-# markdown files are discovered.
-for doc in sorted(glob.glob(os.path.join(docs_path, '**', '*.md'), recursive=True)):
     print(doc)
     state = State.NONE
     ignore_next_script = False
