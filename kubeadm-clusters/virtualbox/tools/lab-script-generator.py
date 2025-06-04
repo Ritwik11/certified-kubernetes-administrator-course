@@ -61,7 +61,6 @@ def write_script(filename: str, script: list):
 output_file_no = 1
 script = []
 output_file = None
-for doc in sorted(glob.glob(os.path.join(docs_path, '*.md'))):
     print(doc)
     state = State.NONE
     ignore_next_script = False
